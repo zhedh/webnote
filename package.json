@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "honkit build && cp -r ./_book/* ./docs",
+    "serve": "honkit serve"
+  },
+  "devDependencies": {
+    "honkit": "^5.1.4"
+  }
+}
