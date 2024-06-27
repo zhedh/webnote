@@ -1,0 +1,1240 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>React Fiber 架构 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 5.1.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="react_base.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Http
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../http/http_base.html">
+            
+                <a href="../http/http_base.html">
+            
+                    
+                    Http 知识整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    React 基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="react_core/">
+            
+                <a href="react_core/">
+            
+                    
+                    React 核心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="react_component/">
+            
+                <a href="react_component/">
+            
+                    
+                    React 组件化开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="react_state/">
+            
+                <a href="react_state/">
+            
+                    
+                    React 状态管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="react_communication/">
+            
+                <a href="react_communication/">
+            
+                    
+                    React 组件通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="react_hoc/">
+            
+                <a href="react_hoc/">
+            
+                    
+                    React 高阶组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="react_controlled/">
+            
+                <a href="react_controlled/">
+            
+                    
+                    React 受控组件与非受控组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    React 进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="react_base.html">
+            
+                <a href="react_base.html">
+            
+                    
+                    React Fiber 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="react_base.html">
+            
+                <a href="react_base.html">
+            
+                    
+                    React 双缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="react_base.html">
+            
+                <a href="react_base.html">
+            
+                    
+                    React Diff 算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="react_base.html">
+            
+                <a href="react_base.html">
+            
+                    
+                    React 单向数据流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="react_base.html">
+            
+                <a href="react_base.html">
+            
+                    
+                    React 虚拟 DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.6" data-path="react_base.html">
+            
+                <a href="react_base.html">
+            
+                    
+                    React Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    微信小程序
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    音视频通话
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../applet/chat/vga/">
+            
+                <a href="../applet/chat/vga/">
+            
+                    
+                    双人音视频通话
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >React Fiber 架构</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="react-组件化开发">React 组件化开发</h1>
+<p>React 是一个用于构建用户界面（UI）的 JavaScript 库，用户界面由按钮、文本和图像等小单元内容构建而成。React 帮助你把它们组合成可重用、可嵌套的 组件。</p>
+<h2 id="组件定义">组件定义</h2>
+<p><strong>React 组件是一段可以 使用标签进行扩展 的 JavaScript 函数。</strong></p>
+<p>React 组件可以通过两种形式定义，一种是函数式组件，另一种是类式组件。函数式组件通常用于无状态组件，而类式组件则可以包含状态和生命周期方法。</p>
+<p>自从 React 16.8 版本引入 Hook 机制后，允许函数组件使用 state 和其他 React 特性，无需使用类。Hooks 让函数组件能够拥有更多的功能和灵活性，同时也简化了组件的编写。</p>
+<h3 id="定义一个组件">定义一个组件</h3>
+<p>定义函数</p>
+<pre><code class="lang-js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) {}
+</code></pre>
+<p>添加标签</p>
+<pre><code class="lang-js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://i.imgur.com/MK3eW3Am.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Katherine Johnson&quot;</span> /&gt;</span></span>
+}
+</code></pre>
+<p>导出组件</p>
+<pre><code class="lang-js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://i.imgur.com/MK3eW3Am.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Katherine Johnson&quot;</span> /&gt;</span></span>
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Profile</span>
+</code></pre>
+<h3 id="使用组件">使用组件</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Profile</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Profile&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Gallery</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>了不起的科学家<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<h3 id="避坑指南">避坑指南</h3>
+<p><strong>1.组件的名称必须以大写字母开头。</strong></p>
+<p>React 组件是常规的 JavaScript 函数，名称定义为小写并以小写方式引入时，React 将认为是普通的 html 标签，可能会导致渲染错误或其他问题。</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Bad</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">profile</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://i.imgur.com/MK3eW3Am.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Katherine Johnson&quot;</span> /&gt;</span></span>
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Gallery</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>了不起的科学家<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      {/* React 将 profile 识别为普通的 html 标签 */}
+      {/* 可能会导致渲染错误或其他问题 */}
+      <span class="hljs-tag">&lt;<span class="hljs-name">profile</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// Good</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://i.imgur.com/MK3eW3Am.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Katherine Johnson&quot;</span> /&gt;</span></span>
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Gallery</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>了不起的科学家<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p><strong>2.不要在组件里嵌套定义组件。</strong></p>
+<p>原因如下：</p>
+<ul>
+<li>影响性能，导致不必要的重新渲染。父组件每次更新都会导致子组件重新挂载。</li>
+<li>可维护性低、不利于代码的组织、不利于代码复用、不利于测试。</li>
+</ul>
+<p>原因分析参考<a href="https://prinsss.github.io/react-unstable-nested-components/" target="_blank">真的不可以在 React 组件内部嵌套定义子组件吗？</a></p>
+<p>错误示例：</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Bad</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Gallery</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-comment">// 永远不要在组件中定义组件</span>
+  <span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-comment">// ...</span>
+  }
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p>在顶层声明组件：</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Good</span>
+
+<span class="hljs-comment">// 永远不要在组件中定义组件</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Gallery</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p>使用渲染函数：</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Good</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Gallery</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">renderProfile</span> = (<span class="hljs-params"></span>) =&gt; {
+    <span class="hljs-comment">// ...</span>
+  }
+
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<h2 id="jsx-语法">JSX 语法</h2>
+<p>JSX（JavaScript XML）是一种 JavaScript 语言的语法扩展，主要用于描述用户界面。它允许开发人员以一种类似于 HTML 的标记语言风格来编写代码，这使得编写和阅读代码变得更加直观和易于理解。JSX 本质上是 React.createElement 方法的语法糖，它提供了一种更简洁的方式来描述 React 元素。</p>
+<p>使用 JSX 来创建一个简单的 React 元素：</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> element = <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, world!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+</code></pre>
+<p>这段代码等同于使用 React.createElement 方法创建一个&apos;h1&apos;类型的元素，并设置其内容为&apos;Hello, world!&apos;：</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> element = <span class="hljs-title class_">React</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&apos;h1&apos;</span>, <span class="hljs-literal">null</span>, <span class="hljs-string">&apos;Hello, world!&apos;</span>)
+</code></pre>
+<h3 id="jsx-语法规则">JSX 语法规则</h3>
+<p><strong>1.只能返回一个根元素</strong></p>
+<p>JSX 虽然看起来很像 HTML，但在底层其实被转化为了 JavaScript 对象，</p>
+<pre><code class="lang-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Component</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>标题<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一段描述<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<pre><code class="lang-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Component</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>标题<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一段描述<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+</code></pre>
+<pre><code class="lang-tsx"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Fragment</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Component</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Fragment</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>标题<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一段描述<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Fragment</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p><strong>2.标签必须闭合</strong></p>
+<p>JSX 语法要求所有的组件标签都必须闭合。这是因为 React 组件被视为不可分割的整体，即使在某个组件中没有内容，也需要使用自闭合的形式来表示。这一规则适用于所有的自定义组件和内置组件。</p>
+<p>这个规则确保了 React 可以准确地追踪哪些组件正在使用中，从而有效地管理组件的生命周期。不遵守这个规则可能会导致 React 无法正确地处理组件，进而引发错误。</p>
+<pre><code class="lang-tsx">&lt;&gt;
+  <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://i.imgur.com/yXOvdOSs.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Hedy Lamarr&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;photo&quot;</span> /&gt;</span></span>
+  <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>发明一种新式交通信号灯<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>排练一个电影场景<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>改进频谱技术<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+&lt;/&gt;
+</code></pre>
+<p>标签不闭合产生的影响：</p>
+<p>1.对于 html 标签，React 将无法正确地解析和渲染这些元素。React 会抛出一个错误，提示存在一个未闭合的标签。</p>
+<pre><code class="lang-tsx"><span class="hljs-comment">// Bad</span>
+&lt;div&gt;
+  &lt;p&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-tsx"><span class="hljs-comment">// Good</span>
+&lt;div&gt;
+  <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+&lt;/div&gt;
+</code></pre>
+<p>2.对于自闭合的 HTML 元素，如<input>、<img>等，React 将无法正确地解析和渲染这些元素。React 会抛出一个错误，提示存在一个未闭合的标签。</p>
+<pre><code class="lang-tsx"><span class="hljs-comment">// Bad</span>
+&lt;img src=<span class="hljs-string">&quot;https://i.imgur.com/yXOvdOSs.jpg&quot;</span> alt=<span class="hljs-string">&quot;Hedy Lamarr&quot;</span>&gt;
+</code></pre>
+<pre><code class="lang-tsx"><span class="hljs-comment">// Good</span>
+&lt;img src=<span class="hljs-string">&quot;https://i.imgur.com/yXOvdOSs.jpg&quot;</span> alt=<span class="hljs-string">&quot;Hedy Lamarr&quot;</span> /&gt;
+</code></pre>
+<p>3.对于自定义组件，如果标签未闭合，React 将无法正确地实例化和渲染这些组件。React 会抛出一个错误 Unterminated regexp literal。</p>
+<pre><code class="lang-tsx"><span class="hljs-comment">// Bad</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Gallery</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>了不起的科学家<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+  )
+}
+</span></code></pre>
+<pre><code class="lang-tsx"><span class="hljs-comment">// Good</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Gallery</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>了不起的科学家<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p><strong>3.使用驼峰式命名大部分属性命名（不是所有）</strong></p>
+<p>因为 JSX 最终会被转化为 JavaScript。JavaScript 对变量的命名有限制，变量名称不能包含 - 符号或者像 class 这样的保留字。所以在 React 中，大部分 HTML 和 SVG 属性都用驼峰式命名法表示。</p>
+<pre><code class="lang-tsx">&lt;img
+  src=<span class="hljs-string">&quot;https://i.imgur.com/yXOvdOSs.jpg&quot;</span>
+  alt=<span class="hljs-string">&quot;Hedy Lamarr&quot;</span>
+  className=<span class="hljs-string">&quot;photo&quot;</span>
+/&gt;
+</code></pre>
+<p>由于历史原因，JSX 中 aria-<em> 和 data-</em> 属性是以带 - 符号的 HTML 格式书写。</p>
+<p><strong>4.大括号使用 JavaScript</strong></p>
+<p>用作标签属性</p>
+<pre><code class="lang-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Avatar</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> avatar = <span class="hljs-string">&apos;https://i.imgur.com/7vQD0fPs.jpg&apos;</span>
+  <span class="hljs-keyword">const</span> description = <span class="hljs-string">&apos;Gregorio Y. Zara&apos;</span>
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;avatar&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">{avatar}</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">{description}</span> /&gt;</span></span>
+}
+</code></pre>
+<p>用作标签内文本</p>
+<pre><code class="lang-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">TodoList</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> name = <span class="hljs-string">&apos;Gregorio Y. Zara&apos;</span>
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>{name}&apos;s To Do List<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+}
+</code></pre>
+<p>用作 CSS 对象</p>
+<pre><code class="lang-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">TodoList</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>
+      <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+        <span class="hljs-attr">backgroundColor:</span> &apos;<span class="hljs-attr">black</span>&apos;,
+        <span class="hljs-attr">color:</span> &apos;<span class="hljs-attr">pink</span>&apos;,
+      }}
+    &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Improve the videophone<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Prepare aeronautics lectures<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Work on the alcohol-fuelled engine<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<h3 id="条件渲染">条件渲染</h3>
+<p>在 React 中，可以通过使用 JavaScript 的 if 语句、&amp;&amp; 和 ? : 运算符来选择性地渲染 JSX。</p>
+<p><strong>使用 if</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Item</span>(<span class="hljs-params">{ name, isPacked }</span>) {
+  <span class="hljs-keyword">if</span> (isPacked) {
+    <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>{name} ✔<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+  }
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>{name}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">PackingList</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Sally Ride 的行李清单<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span> <span class="hljs-attr">isPacked</span>=<span class="hljs-string">{true}</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;宇航服&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span> <span class="hljs-attr">isPacked</span>=<span class="hljs-string">{true}</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;带金箔的头盔&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span> <span class="hljs-attr">isPacked</span>=<span class="hljs-string">{false}</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;Tam 的照片&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p><strong>使用 ? : 运算符</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Item</span>(<span class="hljs-params">{ name, isPacked }</span>) {
+  <span class="hljs-keyword">return</span> isPacked ? (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>{name} ✔<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+  ) : (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>{name}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+  )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">PackingList</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Sally Ride 的行李清单<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span> <span class="hljs-attr">isPacked</span>=<span class="hljs-string">{true}</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;宇航服&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span> <span class="hljs-attr">isPacked</span>=<span class="hljs-string">{true}</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;带金箔的头盔&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span> <span class="hljs-attr">isPacked</span>=<span class="hljs-string">{false}</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;Tam 的照片&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p><strong>使用 ? : 运算符</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Item</span>(<span class="hljs-params">{ name, isPacked }</span>) {
+  <span class="hljs-keyword">return</span> isPacked ? (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>{name} ✔<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+  ) : (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>{name}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+  )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">PackingList</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Sally Ride 的行李清单<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span> <span class="hljs-attr">isPacked</span>=<span class="hljs-string">{true}</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;宇航服&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span> <span class="hljs-attr">isPacked</span>=<span class="hljs-string">{true}</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;带金箔的头盔&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span> <span class="hljs-attr">isPacked</span>=<span class="hljs-string">{false}</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;Tam 的照片&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p><strong>使用 &amp;&amp; 运算符</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Item</span>(<span class="hljs-params">{ name, isPacked }</span>) {
+  <span class="hljs-keyword">return</span> isPacked &amp;&amp; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>{name}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">PackingList</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> isPacked = <span class="hljs-literal">true</span>
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Sally Ride 的行李清单<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span> <span class="hljs-attr">isPacked</span>=<span class="hljs-string">{true}</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;宇航服&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span> <span class="hljs-attr">isPacked</span>=<span class="hljs-string">{true}</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;带金箔的头盔&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Item</span> <span class="hljs-attr">isPacked</span>=<span class="hljs-string">{false}</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;Tam 的照片&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<h3 id="列表渲染">列表渲染</h3>
+<p>渲染列表数据：</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">function</span> <span class="hljs-title function_">List</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>凯瑟琳·约翰逊: 数学家<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>马里奥·莫利纳: 化学家<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>穆罕默德·阿卜杜勒·萨拉姆: 物理学家<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>珀西·莱温·朱利亚: 化学家<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>苏布拉马尼扬·钱德拉塞卡: 天体物理学家<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p>从数组中渲染数据：</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">function</span> <span class="hljs-title function_">List</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> people = [
+    <span class="hljs-string">&apos;凯瑟琳·约翰逊: 数学家&apos;</span>,
+    <span class="hljs-string">&apos;马里奥·莫利纳: 化学家&apos;</span>,
+    <span class="hljs-string">&apos;穆罕默德·阿卜杜勒·萨拉姆: 物理学家&apos;</span>,
+    <span class="hljs-string">&apos;珀西·莱温·朱利亚: 化学家&apos;</span>,
+    <span class="hljs-string">&apos;苏布拉马尼扬·钱德拉塞卡: 天体物理学家&apos;</span>,
+  ]
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+      {people.map((person) =&gt; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{person}</span>&gt;</span>{person}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      ))}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p>数组过滤后再渲染数据，原因如下：</p>
+<ol>
+<li>性能问题：如果在每次渲染时都对数组进行过滤，那么即使数组本身并没有变化，也会触发不必要的渲染。</li>
+<li>可读性和可维护性：在渲染方法中添加过滤逻辑会使代码变得难以阅读和维护。过滤逻辑应该与渲染逻辑分离，这样可以让代码更加清晰和模块化。</li>
+</ol>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> people = [
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;凯瑟琳·约翰逊&apos;</span>,
+    <span class="hljs-attr">profession</span>: <span class="hljs-string">&apos;数学家&apos;</span>,
+    <span class="hljs-attr">accomplishment</span>: <span class="hljs-string">&apos;太空飞行相关数值的核算&apos;</span>,
+    <span class="hljs-attr">imageId</span>: <span class="hljs-string">&apos;MK3eW3A&apos;</span>,
+  },
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;马里奥·莫利纳&apos;</span>,
+    <span class="hljs-attr">profession</span>: <span class="hljs-string">&apos;化学家&apos;</span>,
+    <span class="hljs-attr">accomplishment</span>: <span class="hljs-string">&apos;北极臭氧空洞的发现&apos;</span>,
+    <span class="hljs-attr">imageId</span>: <span class="hljs-string">&apos;mynHUSa&apos;</span>,
+  },
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;穆罕默德·阿卜杜勒·萨拉姆&apos;</span>,
+    <span class="hljs-attr">profession</span>: <span class="hljs-string">&apos;物理学家&apos;</span>,
+    <span class="hljs-attr">accomplishment</span>: <span class="hljs-string">&apos;关于基本粒子间弱相互作用和电磁相互作用的统一理论&apos;</span>,
+    <span class="hljs-attr">imageId</span>: <span class="hljs-string">&apos;bE7W1ji&apos;</span>,
+  },
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;珀西·莱温·朱利亚&apos;</span>,
+    <span class="hljs-attr">profession</span>: <span class="hljs-string">&apos;化学家&apos;</span>,
+    <span class="hljs-attr">accomplishment</span>: <span class="hljs-string">&apos;开创性的可的松药物、类固醇和避孕药的研究&apos;</span>,
+    <span class="hljs-attr">imageId</span>: <span class="hljs-string">&apos;IOjWm71&apos;</span>,
+  },
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-number">4</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;苏布拉马尼扬·钱德拉塞卡&apos;</span>,
+    <span class="hljs-attr">profession</span>: <span class="hljs-string">&apos;天体物理学家&apos;</span>,
+    <span class="hljs-attr">accomplishment</span>: <span class="hljs-string">&apos;白矮星质量计算&apos;</span>,
+    <span class="hljs-attr">imageId</span>: <span class="hljs-string">&apos;lrWQx8l&apos;</span>,
+  },
+]
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">List</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> chemists = people.<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">person</span>) =&gt;</span> person.<span class="hljs-property">profession</span> === <span class="hljs-string">&apos;化学家&apos;</span>)
+  <span class="hljs-keyword">const</span> listItems = chemists.<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params">person</span>) =&gt;</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{person.name}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>{person.name}:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+        {&apos; &apos; + person.profession + &apos; &apos;}因{person.accomplishment}而闻名世界
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+  ))
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>{listItems}<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+}
+</code></pre>
+<h4 id="列表中的-key">列表中的 KEY</h4>
+<p><strong>用 key 保持列表项的顺序。</strong>这些 key 会告诉 React，每个组件对应着数组里的哪一项，所以 React 可以把它们匹配起来。这在数组项进行移动（例如排序）、插入或删除等操作时非常重要。一个合适的 key 可以帮助 React 推断发生了什么，从而得以正确地更新 DOM 树。</p>
+<p><strong>key 的设定</strong></p>
+<ul>
+<li>数据库的数据：表的主键，或者能充当唯一索引的值</li>
+<li>本地产生的数据：自增计数器或 uuid</li>
+</ul>
+<p><strong>key 需要满足的条件</strong></p>
+<ul>
+<li>key 值在兄弟节点之间必须是唯一</li>
+<li>key 值不能改变</li>
+</ul>
+<p><strong>注意事项</strong></p>
+<ul>
+<li>列表渲染时一定要指定唯一 key。没有显式地指定 key 值，React 默认会把数组项的索引当作 key 值来用。涉及数组操作如插入、删除等改变数组顺序的操作时，会导致数据渲染错乱。</li>
+<li>不能使用运行过程中动态地产生 key，如 key={Math.random()}。这会导致每次重新渲染后的 key 值都不一样，从而使得所有的组件和 DOM 元素每次都要重新创建。</li>
+<li>组件不会把 key 当作 props 的一部分。</li>
+</ul>
+<h2 id="组件属性（props）">组件属性（Props）</h2>
+<p>React 组件使用 props 来互相通信。每个父组件都可以提供 props 给它的子组件，从而将一些信息传递给它。props 可以是任何 JavaScript 值，包括对象、数组和函数。</p>
+<p>属性传递：</p>
+<pre><code class="lang-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> person = {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;Lin Lanying&apos;</span>,
+    <span class="hljs-attr">imageUrl</span>: <span class="hljs-string">&apos;https://i.imgur.com/yXOvdOSs.jpg&apos;</span>,
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Avatar</span> <span class="hljs-attr">person</span>=<span class="hljs-string">{person}</span> <span class="hljs-attr">size</span>=<span class="hljs-string">{100}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+</code></pre>
+<p>属性接收：</p>
+<pre><code class="lang-tsx"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">AvatarProps</span> {
+  <span class="hljs-attr">person</span>: {
+    <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>
+    <span class="hljs-attr">imageUrl</span>: <span class="hljs-built_in">string</span>
+  }
+  <span class="hljs-attr">size</span>: <span class="hljs-built_in">number</span>
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Avatar</span>(<span class="hljs-params">{ person, size }: AvatarProps</span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span>
+      <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;avatar&quot;</span>
+      <span class="hljs-attr">src</span>=<span class="hljs-string">{person.imageUrl}</span>
+      <span class="hljs-attr">alt</span>=<span class="hljs-string">{person.name}</span>
+      <span class="hljs-attr">width</span>=<span class="hljs-string">{size}</span>
+      <span class="hljs-attr">height</span>=<span class="hljs-string">{size}</span>
+    /&gt;</span></span>
+  )
+}
+</code></pre>
+<p>指定默认值：</p>
+<pre><code class="lang-tsx"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Avatar</span>(<span class="hljs-params">{ person, size = <span class="hljs-number">80</span> }: AvatarProps</span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span>
+      <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;avatar&quot;</span>
+      <span class="hljs-attr">src</span>=<span class="hljs-string">{person.imageUrl}</span>
+      <span class="hljs-attr">alt</span>=<span class="hljs-string">{person.name}</span>
+      <span class="hljs-attr">width</span>=<span class="hljs-string">{size}</span>
+      <span class="hljs-attr">height</span>=<span class="hljs-string">{size}</span>
+    /&gt;</span></span>
+  )
+}
+</code></pre>
+<p>JSX 传递子组件：</p>
+<pre><code class="lang-tsx"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Avatar</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Avatar&apos;</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Card</span>(<span class="hljs-params">{ children }</span>) {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;card&quot;</span>&gt;</span>{children}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Card</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Avatar</span>
+        <span class="hljs-attr">size</span>=<span class="hljs-string">{100}</span>
+        <span class="hljs-attr">person</span>=<span class="hljs-string">{{</span>
+          <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Katsuko</span> <span class="hljs-attr">Saruhashi</span>&apos;,
+          <span class="hljs-attr">imageUrl:</span> &apos;<span class="hljs-attr">YfeOqp2</span>&apos;,
+        }}
+      /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Card</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<h2 id="组件状态（state）">组件状态（State）</h2>
+<p>在 React 中，组件的状态（State）是用来存储组件内部数据的，它代表了组件的当前状态，并且是组件渲染时的数据依据。组件的状态是动态的，会随着程序的运行而改变。</p>
+<p>使用示例：</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// 在类组件中</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Counter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">React.Component</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">props</span>) {
+    <span class="hljs-variable language_">super</span>(props)
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">state</span> = {
+      <span class="hljs-attr">count</span>: <span class="hljs-number">0</span>,
+    }
+  }
+
+  handleIncrement = <span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">setState</span>({ <span class="hljs-attr">count</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">state</span>.<span class="hljs-property">count</span> + <span class="hljs-number">1</span> })
+  }
+
+  handleDecrement = <span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">setState</span>({ <span class="hljs-attr">count</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">state</span>.<span class="hljs-property">count</span> - <span class="hljs-number">1</span> })
+  }
+
+  <span class="hljs-title function_">render</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">return</span> (
+      <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Clicked: {this.state.count} times<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.handleDecrement}</span>&gt;</span>-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.handleIncrement}</span>&gt;</span>+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+</code></pre>
+<pre><code class="lang-jsx"><span class="hljs-comment">// 在函数组件中</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Counter</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-comment">// 使用useState Hook来定义状态和对应的更新函数</span>
+  <span class="hljs-keyword">const</span> [count, setCount] = <span class="hljs-title function_">useState</span>(<span class="hljs-number">0</span>) <span class="hljs-comment">// 初始状态为0</span>
+
+  <span class="hljs-comment">// 处理点击事件的函数</span>
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">handleClick</span> = (<span class="hljs-params"></span>) =&gt; {
+    <span class="hljs-title function_">setCount</span>(<span class="hljs-function">(<span class="hljs-params">prevCount</span>) =&gt;</span> prevCount + <span class="hljs-number">1</span>) <span class="hljs-comment">// 递增计数器</span>
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You clicked me {count} times<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{handleClick}</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p><strong>组件状态的作用</strong></p>
+<p>组件的状态是组件渲染结果的依据，它决定了组件应该如何渲染到用户界面上。当组件的状态发生变化时，React 会重新渲染组件，并更新 DOM 以反映这些变化。</p>
+<p><strong>组件状态的定义</strong></p>
+<ul>
+<li>在类组件中通过 this.state 属性进行定义</li>
+<li>在函数组件中使用 useState</li>
+</ul>
+<p><strong>组件状态的改变</strong></p>
+<ul>
+<li>在类组件中通过 this.setState 属性进行定义</li>
+<li>在函数组件中使用 useState 返回的更新状态的函数，如示例中的 setCount 方法</li>
+</ul>
+<p><strong>组件状态与 props 的区别</strong></p>
+<p>组件的状态是组件内部的属性，它是由组件自己维护的，并且可以随时间改变。而 props 是从外部传入组件的属性，它们通常是静态的，不能被组件内部的方法修改。</p>
+<p><strong>组件状态的设计原则</strong></p>
+<p>在设计组件状态时，应该确保状态能够代表组件 UI 的完整状态集，并且是所有用于 UI 变化的状态的集合，不包含任何多余的状态。这意味着，状态中的每一个变量都应该直接或间接地影响组件的渲染结果。</p>
+<p><strong>组件状态的判断依据</strong></p>
+<p>决定一个变量是否应该作为组件的状态时，可以考虑以下几个因素：</p>
+<ul>
+<li>该变量是否是直接从父组件通过 props 传递进来的？</li>
+<li>该变量在组件的生命周期内是否保持不变？</li>
+<li>该变量是否可以由已有的 props 或 state 计算得出？</li>
+<li>该变量是否在组件的 render 方法中被使用？</li>
+</ul>
+<p><strong>组件状态的优化</strong></p>
+<p>为了提高性能，可以使用 React.memo 包装函数组件或者让类组件继承 React.memo 来防止不必要的重新渲染。此外，还可以实现 shouldComponentUpdate 方法来控制组件的更新逻辑。</p>
+<h2 id="组件生命周期">组件生命周期</h2>
+<p>对于类组件，React 组件的生命周期可以分为几个不同的阶段，每个阶段都有其特定的用途和方法调用。</p>
+<p><img src="../assets/react_life_cycle.png" alt="alt 组件生命周期"></p>
+<p><strong>1.挂载阶段（Mounting）‌</strong></p>
+<p>这个阶段发生在组件实例被创建并插入到 DOM 中的时候。具体的生命周期方法调用顺序如下：</p>
+<ul>
+<li>constructor()：在组件挂载之前，会首先调用构造函数。在这里，你可以进行一些初始化设置，例如绑定事件处理器，或者将 props 传递给 state。</li>
+<li>static getDerivedStateFromProps()：这个方法在组件实例被创建后，调用 render()方法之前被调用。它允许基于 props 来派生 state，但请注意，在 React 17 及以上版本中，推荐使用 useEffect 钩子和 useState 钩子代替。</li>
+<li>render()：这是 class 组件中唯一必须实现的方法。它返回一个 React 元素，React 会将其渲染到 DOM 上。</li>
+<li>componentDidMount()：在组件挂载完成后立即调用，通常在这里执行 DOM 操作，如发起网络请求或设置定时器等。</li>
+</ul>
+<p><strong>更新阶段（Updating）‌</strong></p>
+<p>当组件的 props 或 state 发生变化时，组件会进入更新阶段。更新阶段的调用顺序如下：</p>
+<ul>
+<li>static getDerivedStateFromProps()：同挂载阶段一样，在组件接收到新的 props 时被调用。</li>
+<li>shouldComponentUpdate()：这是一个允许组件决定是否继续更新流程的方法。如果返回 false，则后续的渲染和生命周期方法都不会调用。</li>
+<li>render()：同挂载阶段。</li>
+<li>getSnapshotBeforeUpdate()：在最新的一轮渲染输出到 DOM 之前被调用，可以用来捕获一些 DOM 信息，如滚动位置等。</li>
+<li>componentDidUpdate()：在组件更新完成并被渲染到 DOM 后调用，通常在这里执行基于更新结果的 DOM 操作。</li>
+</ul>
+<p><strong>卸载阶段（Unmounting）‌</strong></p>
+<p>当组件从 DOM 中移除时，会进入卸载阶段，此时只会调用 componentWillUnmount()方法，通常在这里进行清理操作，如取消网络请求、清除定时器、解绑事件处理器等，以防止内存泄漏。</p>
+<h2 id="组件渲染">组件渲染</h2>
+<p>React 组件的渲染是将组件转化为可视化的用户界面，并通过客户端或服务器端的方式呈现给最终用户的过程。这个过程涉及将组件转换为浏览器可以理解的 HTML 标记。</p>
+<p>在 React 中，有两种主要的渲染方式：客户端渲染和服务器端渲染。</p>
+<p><strong>客户端渲染</strong></p>
+<p>客户端渲染是在用户的浏览器中完成的。当你在 React 应用程序中定义一个组件时，你可以通过调用 ReactDOM.render()方法将该组件渲染到页面上。</p>
+<pre><code class="lang-jsx"><span class="hljs-title class_">ReactDOM</span>.<span class="hljs-title function_">render</span>(<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>, <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&apos;root&apos;</span>))
+</code></pre>
+<p><strong>服务器端渲染</strong></p>
+<p>服务器端渲染（SSR）是在服务器上完成的，目的是为了生成一个完整的 HTML 页面，然后发送给客户端。这样做的好处是可以提升首次加载的性能，同时也有利于 SEO，因为搜索引擎可以直接抓取服务端生成的静态 HTML。</p>
+<p>在 React 中，可以使用 ReactDOMServer.renderToString()来实现服务器端渲染。</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> html = <span class="hljs-title class_">ReactDOMServer</span>.<span class="hljs-title function_">renderToString</span>(<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>)
+</code></pre>
+<h3 id="渲染流程">渲染流程</h3>
+<p>无论采用哪种渲染方式，React 都遵循类似的渲染流程：</p>
+<ol>
+<li>组件实例化：React 会根据组件的定义创建一个组件实例。</li>
+<li>组件挂载：React 会调用组件的 render 方法，并根据返回的 React 元素创建对应的 DOM 节点。</li>
+<li>更新：当组件的状态或属性发生变化时，React 会再次调用 render 方法，并更新 DOM 以反映新的状态。</li>
+<li>卸载：当组件不再需要时，React 会卸载组件，并从 DOM 中移除相关的节点。</li>
+</ol>
+<h3 id="注意事项">注意事项</h3>
+<p>在进行 React 组件渲染时，需要注意以下几点：</p>
+<ul>
+<li>状态管理：确保正确地管理和更新组件的状态，以避免不必要的渲染。</li>
+<li>性能优化：合理使用 shouldComponentUpdate 等生命周期方法来减少不必要的渲染。</li>
+<li>错误处理：妥善处理渲染过程中可能出现的错误，避免整个应用崩溃。</li>
+<li>无障碍访问：确保渲染的 UI 满足无障碍访问标准，方便所有用户使用。</li>
+</ul>
+<h2 id="组件组合">组件组合</h2>
+<p>在 React 中，组件的组合是一种重要的概念，它允许开发者通过将多个小部件组合在一起来构建复杂的用户界面。组件组合的核心思想在于，通过将简单、独立的组件组合起来，可以形成更为复杂、功能丰富的组件，从而实现代码的重用和模块化。</p>
+<p>React 推荐使用组合而非继承来实现组件之间的代码重用。组件组合涉及到父子组件的关系，其中父组件通过 props 向子组件传递数据和调用方法，子组件则负责渲染具体的 UI。</p>
+<p>例如，一个通用的对话框组件 CommonDialogBox 可以设计为接受任意子组件作为其内容。这个对话框组件本身不关心子组件的具体内容，它只是提供一个容器，通过 children prop 来传递子组件：</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">function</span> <span class="hljs-title function_">CommonDialogBox</span>(<span class="hljs-params">props</span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{props.style}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{props.className}</span>&gt;</span>
+      {props.children}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p>这样，开发者就可以通过 JSX 嵌套的方式，将任意组件作为子组件传递给 CommonDialogBox：</p>
+<pre><code class="lang-jsx">&lt;<span class="hljs-title class_">CommonDialogBox</span>&gt;
+  <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">MySpecialComponent</span> /&gt;</span></span>
+&lt;/<span class="hljs-title class_">CommonDialogBox</span>&gt;
+</code></pre>
+<p>此外，React 还提供了 React.Children.map()和 React.cloneElement()这样的 API 来帮助我们在父组件中处理子组件。例如，我们可以使用 Children.map()来遍历子组件数组，并对每个子组件应用某些操作：</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> children = <span class="hljs-title class_">React</span>.<span class="hljs-property">Children</span>.<span class="hljs-title function_">map</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">props</span>.<span class="hljs-property">children</span>, <span class="hljs-function">(<span class="hljs-params">child</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> <span class="hljs-title class_">React</span>.<span class="hljs-title function_">cloneElement</span>(child, { stage, <span class="hljs-attr">handleClick</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">handleClick</span> })
+})
+</code></pre>
+<p>在实际应用中，组件组合不仅可以用来构建用户界面，还可以用来优化 React 应用的结构。通过显式地将一个或多个子组件作为 props 传递给父组件，我们可以在父组件内部检索并渲染这些子组件。这种方法不仅提高了组件之间的数据传递效率，还增加了代码的可读性和可维护性。</p>
+<h2 id="组件样式">组件样式</h2>
+<p>在 React 中，组件的样式可以通过多种方式进行应用和管理。</p>
+<p><strong>内联样式</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">function</span> <span class="hljs-title function_">MyComponent</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">color:</span> &apos;<span class="hljs-attr">red</span>&apos;, <span class="hljs-attr">fontSize:</span> &apos;<span class="hljs-attr">20px</span>&apos; }}&gt;</span>Hello, World!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+}
+</code></pre>
+<p><strong>CSS 样式表</strong></p>
+<pre><code class="lang-scss"><span class="hljs-selector-class">.my-class</span> {
+  <span class="hljs-attribute">color</span>: blue;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+}
+</code></pre>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./styles.css&apos;</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">MyComponent</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;my-class&quot;</span>&gt;</span>Hello, World!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+}
+</code></pre>
+<p><strong>CSS 模块</strong></p>
+<pre><code class="lang-css"><span class="hljs-comment">/* styles.module.css */</span>
+
+<span class="hljs-selector-class">.my-class</span> {
+  <span class="hljs-attribute">color</span>: green;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+}
+</code></pre>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> styles <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./styles.module.css&apos;</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">MyComponent</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{styles.myClass}</span>&gt;</span>Hello, World!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+}
+</code></pre>
+<p><strong>styled-components</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> styled <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;styled-components&apos;</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-title class_">MyStyledDiv</span> = styled.<span class="hljs-property">div</span><span class="hljs-string">`
+  color: yellow;
+  font-size: 20px;
+`</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">MyComponent</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">MyStyledDiv</span>&gt;</span>Hello, World!<span class="hljs-tag">&lt;/<span class="hljs-name">MyStyledDiv</span>&gt;</span></span>
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="react_base.html" class="navigation navigation-next navigation-unique" aria-label="Next page: React 双缓存机制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"React Fiber 架构","level":"1.4.1","depth":2,"next":{"title":"React 双缓存机制","level":"1.4.2","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},"previous":{"title":"React 进阶","level":"1.4","depth":1,"ref":"","articles":[{"title":"React Fiber 架构","level":"1.4.1","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React 双缓存机制","level":"1.4.2","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React Diff 算法","level":"1.4.3","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React 单向数据流","level":"1.4.4","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React 虚拟 DOM","level":"1.4.5","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React Hooks","level":"1.4.6","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/react_base.md","mtime":"2024-04-07T05:20:46.315Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-06-27T03:02:11.703Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

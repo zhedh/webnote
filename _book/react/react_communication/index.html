@@ -1,0 +1,1222 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>React 组件通信 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 5.1.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../react_hoc/" />
+    
+    
+    <link rel="prev" href="../react_state/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Http
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../http/http_base.html">
+            
+                <a href="../../http/http_base.html">
+            
+                    
+                    Http 知识整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    React 基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../react_core/">
+            
+                <a href="../react_core/">
+            
+                    
+                    React 核心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../react_component/">
+            
+                <a href="../react_component/">
+            
+                    
+                    React 组件化开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../react_state/">
+            
+                <a href="../react_state/">
+            
+                    
+                    React 状态管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    React 组件通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../react_hoc/">
+            
+                <a href="../react_hoc/">
+            
+                    
+                    React 高阶组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../react_controlled/">
+            
+                <a href="../react_controlled/">
+            
+                    
+                    React 受控组件与非受控组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    React 进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../react_base.html">
+            
+                <a href="../react_base.html">
+            
+                    
+                    React Fiber 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../react_base.html">
+            
+                <a href="../react_base.html">
+            
+                    
+                    React 双缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../react_base.html">
+            
+                <a href="../react_base.html">
+            
+                    
+                    React Diff 算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../react_base.html">
+            
+                <a href="../react_base.html">
+            
+                    
+                    React 单向数据流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../react_base.html">
+            
+                <a href="../react_base.html">
+            
+                    
+                    React 虚拟 DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../react_base.html">
+            
+                <a href="../react_base.html">
+            
+                    
+                    React Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    微信小程序
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    音视频通话
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../applet/chat/vga/">
+            
+                <a href="../../applet/chat/vga/">
+            
+                    
+                    双人音视频通话
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >React 组件通信</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="react-组件通信">React 组件通信</h1>
+<p>在 React 中，组件之间的通信是非常重要的，它允许不同的组件能够相互交换数据和事件。</p>
+<h2 id="react-组件通信方式">React 组件通信方式</h2>
+<ul>
+<li><p>Props &amp; Callback Functions: 这是最常用的通信方式，父组件通过 props 将数据传递给子组件，子组件通过 props 访问这些数据；子组件通过调用从父组件传递下来的回调函数来与父组件通信。</p>
+</li>
+<li><p>Context: 对于那些不直接相关的组件，可以使用 Context API 来共享状态，避免通过多层级的 props 传递。</p>
+</li>
+<li><p>Redux: 对于大型应用，通常会使用 Redux 这样的状态管理库来集中管理应用的状态，并通过 connect 函数将状态映射到 React 组件。</p>
+</li>
+<li><p>Portals: 使用 Portals 可以将子树渲染到父组件 DOM 树的不同位置，这也可以用于组件间的通信。</p>
+</li>
+<li><p>Global Variables: 虽然不推荐，但也可以通过全局变量或内存变量来实现组件间的通信。</p>
+</li>
+<li><p>Event Bubbling: 在 React 中，可以使用合成事件系统来实现事件的冒泡，从而在不同层级的组件之间传递事件。</p>
+</li>
+<li><p>JS 自定义事件: 在 React 中，可以使用 JS 自定义事件，实现跨组件通信。</p>
+</li>
+<li><p>Observer Pattern: 观察者模式可以用来实现组件间的通信，当一个组件的状态发生变化时，其他组件可以得到通知并作出响应。</p>
+</li>
+<li><p>消息订阅与发布: 类似于观察者模式，可以实现一个消息中心，组件可以订阅感兴趣的消息并在消息发布时收到通知。</p>
+</li>
+</ul>
+<h3 id="1-props--callback">1. Props &amp; Callback</h3>
+<p>在 React 中，props 是实现组件间通信的一种基本方式，主要用于父组件向子组件传递数据。props 是组件的输入，它们是单向流动的，即从父组件流向子组件。</p>
+<p><strong>父组件传递数据给子组件</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// 父组件</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">ParentComponent</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> message = <span class="hljs-string">&apos;Hello, World!&apos;</span>
+
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ChildComponent</span> <span class="hljs-attr">message</span>=<span class="hljs-string">{message}</span> /&gt;</span></span>
+}
+
+<span class="hljs-comment">// 子组件</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">ChildComponent</span>(<span class="hljs-params">props</span>) {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{props.message}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+}
+</code></pre>
+<p>在这个例子中，ParentComponent 通过 message 属性向 ChildComponent 传递了一个字符串。ChildComponent 通过其 props 对象接收这个字符串，并将其渲染出来。</p>
+<p><strong>子组件触发父组件中的函数</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// 父组件</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">ParentComponent</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> [count, setCount] = <span class="hljs-title class_">React</span>.<span class="hljs-title function_">useState</span>(<span class="hljs-number">0</span>)
+
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">incrementCount</span> = (<span class="hljs-params"></span>) =&gt; {
+    <span class="hljs-title function_">setCount</span>(count + <span class="hljs-number">1</span>)
+  }
+
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ChildComponent</span> <span class="hljs-attr">increment</span>=<span class="hljs-string">{incrementCount}</span> /&gt;</span></span>
+}
+
+<span class="hljs-comment">// 子组件</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">ChildComponent</span>(<span class="hljs-params">props</span>) {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{props.increment}</span>&gt;</span>Increment<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+}
+</code></pre>
+<p>在这个例子中，ParentComponent 定义了一个 incrementCount 函数，该函数用于更新状态 count。然后，它通过 increment 属性将这个函数传递给 ChildComponent。ChildComponent 在其按钮的点击事件处理器中调用这个函数，从而使得父组件的状态得以更新。</p>
+<h3 id="2使用-context-api">2.使用 Context API</h3>
+<p>Context API 提供了一种在组件树之间共享值的方式，无需通过每个组件手动传递 props。这对于全局数据（如当前认证用户、主题或首选语言）尤其有用。</p>
+<p>以下是如何使用 Context API 来实现组件间通信的基本步骤：</p>
+<p><strong>创建 Context：</strong></p>
+<p>首先，你需要使用 React.createContext() 创建一个 Context 对象。</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title class_">MyContext</span> = <span class="hljs-title class_">React</span>.<span class="hljs-title function_">createContext</span>(defaultValue)
+</code></pre>
+<p>defaultValue 是当组件树中的组件没有匹配到 Provider 时使用的值。</p>
+<p><strong>提供 Context 数据：</strong></p>
+<p>然后，使用 Context 对象的 Provider 组件包裹你的组件树。你可以在 Provider 的 value 属性中传递想要共享的数据。</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">MyProviderComponent</span>(<span class="hljs-params">{ children }</span>) {
+  <span class="hljs-keyword">const</span> [value, setValue] = <span class="hljs-title function_">useState</span>(<span class="hljs-string">&apos;some value&apos;</span>)
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">MyContext.Provider</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">value</span>, <span class="hljs-attr">setValue</span> }}&gt;</span>
+      {children}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">MyContext.Provider</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p><strong>消费 Context 数据：</strong>
+在需要访问 Context 数据的组件中，你可以使用 Context 对象的 Consumer 组件或者 useContext Hook。</p>
+<p>使用 Consumer：</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">MyConsumerComponent</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">MyContext.Consumer</span>&gt;</span>
+      {({ value, setValue }) =&gt; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          Value: {value}
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setValue(&apos;new value&apos;)}&gt;Change Value<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      )}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">MyContext.Consumer</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p>使用 useContext Hook：</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span>, { useContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">MyFunctionalComponent</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> { value, setValue } = <span class="hljs-title function_">useContext</span>(<span class="hljs-title class_">MyContext</span>)
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      Value: {value}
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setValue(&apos;new value&apos;)}&gt;Change Value<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<p>这样，你就可以在组件树中的任何地方通过 Context API 来共享和使用数据了。记住，当你使用 useContext Hook 时，React 会在组件重新渲染时自动订阅 context 的变化，所以你不需要担心订阅或取消订阅 context。</p>
+<h3 id="3使用-redux-状态管理库">3.使用 Redux 状态管理库</h3>
+<p>Redux Toolkit（RTK）是官方推荐的 Redux 工具集，它简化了 Redux 的使用，并提供了一种更现代的方式来使用 Redux。以下是使用 Redux Toolkit 实现组件通信的基本步骤：</p>
+<p><strong>安装 Redux Toolkit：</strong></p>
+<p>在项目中安装 Redux Toolkit。</p>
+<pre><code class="lang-bash">npm install @reduxjs/toolkit react-redux
+</code></pre>
+<p><strong>创建 Slice：</strong></p>
+<p>Slice 是 Redux Toolkit 中的一个新概念，它是一个包含 Reducer、Actions 和 Hooks 的逻辑单元。</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// counterSlice.js</span>
+<span class="hljs-keyword">import</span> { createSlice } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@reduxjs/toolkit&apos;</span>
+
+<span class="hljs-keyword">const</span> counterSlice = <span class="hljs-title function_">createSlice</span>({
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;counter&apos;</span>,
+  <span class="hljs-attr">initialState</span>: {
+    <span class="hljs-attr">value</span>: <span class="hljs-number">0</span>,
+  },
+  <span class="hljs-attr">reducers</span>: {
+    <span class="hljs-attr">increment</span>: <span class="hljs-function">(<span class="hljs-params">state</span>) =&gt;</span> {
+      state.<span class="hljs-property">value</span> += <span class="hljs-number">1</span>
+    },
+    <span class="hljs-attr">decrement</span>: <span class="hljs-function">(<span class="hljs-params">state</span>) =&gt;</span> {
+      state.<span class="hljs-property">value</span> -= <span class="hljs-number">1</span>
+    },
+  },
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> { increment, decrement } = counterSlice.<span class="hljs-property">actions</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> counterSlice.<span class="hljs-property">reducer</span>
+</code></pre>
+<p><strong>配置 Store：</strong></p>
+<p>使用 configureStore 函数来配置 Store，它会自动合并你的 slice reducers。</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// store.js</span>
+<span class="hljs-keyword">import</span> { configureStore } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@reduxjs/toolkit&apos;</span>
+<span class="hljs-keyword">import</span> counterReducer <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./counterSlice&apos;</span>
+
+<span class="hljs-keyword">const</span> store = <span class="hljs-title function_">configureStore</span>({
+  <span class="hljs-attr">reducer</span>: {
+    <span class="hljs-attr">counter</span>: counterReducer,
+  },
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> store
+</code></pre>
+<p><strong>连接 React 和 Redux：</strong></p>
+<p>使用 Provider 组件将 Redux Store 提供给 React 应用。</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// index.js</span>
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">ReactDOM</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">Provider</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>
+<span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./store&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">App</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./App&apos;</span>
+
+<span class="hljs-title class_">ReactDOM</span>.<span class="hljs-title function_">render</span>(
+  <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span></span>,
+  <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&apos;root&apos;</span>)
+)
+</code></pre>
+<p><strong>在组件中使用 Redux：</strong></p>
+<p>使用 useSelector 钩子来读取状态，使用 useDispatch 钩子来分发 Actions。</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// Counter.js</span>
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> { useSelector, useDispatch } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>
+<span class="hljs-keyword">import</span> { increment, decrement } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./counterSlice&apos;</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Counter</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> count = <span class="hljs-title function_">useSelector</span>(<span class="hljs-function">(<span class="hljs-params">state</span>) =&gt;</span> state.<span class="hljs-property">counter</span>.<span class="hljs-property">value</span>)
+  <span class="hljs-keyword">const</span> dispatch = <span class="hljs-title function_">useDispatch</span>()
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{count}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch(increment())}&gt;Increment<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch(decrement())}&gt;Decrement<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Counter</span>
+</code></pre>
+<p>通过以上步骤，你已经使用 Redux Toolkit 在 React 应用程序中实现了组件间的通信。现在，当你点击&quot;Increment&quot;或&quot;Decrement&quot;按钮时，计数器的值会相应地增加或减少，因为 Counter 组件通过 Redux Store 接收到了状态更新。</p>
+<h3 id="4使用-portals-简化组件间的通信">4.使用 Portals 简化组件间的通信</h3>
+<p>在 React 中，Portals 提供了一种将子节点渲染到父组件 DOM 树之外的 DOM 节点的功能。尽管 Portals 本身并不是为了组件间通信而设计的，但它们可以用来在某些情况下简化组件间的通信。</p>
+<p>例如，如果你的应用中有一个模态框（Modal）组件，你可能希望将其渲染到 body 标签下，以便它能够覆盖在其他内容之上。这时，你可以使用 Portals 来实现这一点。同时，由于模态框通常需要与应用的其他部分进行交互（例如关闭模态框），Portals 可以帮助你在不改变组件层次结构的情况下实现这种交互。</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span>, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">ReactDOM</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">Modal</span> = (<span class="hljs-params">{ children }</span>) =&gt; {
+  <span class="hljs-keyword">return</span> <span class="hljs-title class_">ReactDOM</span>.<span class="hljs-title function_">createPortal</span>(
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;modal&quot;</span>&gt;</span>{children}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>,
+    <span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>
+  )
+}
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">App</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> [showModal, setShowModal] = <span class="hljs-title function_">useState</span>(<span class="hljs-literal">false</span>)
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setShowModal(true)}&gt;Open Modal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      {showModal &amp;&amp; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">Modal</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is a modal!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setShowModal(false)}&gt;Close<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Modal</span>&gt;</span>
+      )}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">App</span>
+</code></pre>
+<p>在这个例子中，Modal 组件使用 ReactDOM.createPortal 将内容渲染到 body 标签下。尽管 Modal 的内容在 DOM 结构上不在 App 组件的直接子节点中，但它仍然能够接收来自 App 组件的状态更新，因为它们共享相同的 React 上下文。</p>
+<p>然而，对于更复杂的组件间通信需求，建议使用专门的状态管理库，如 Redux 或 MobX，或者使用 React 的 Context API 来传递数据。这些方法提供了更强大和灵活的方式来管理和共享应用的状态。</p>
+<h3 id="5使用全局变量、内存变量">5.使用全局变量、内存变量</h3>
+<p>在 React 中，虽然不推荐频繁使用全局变量和内存变量来进行组件通信，但在某些特定场景下，这些方法仍然可以被用来实现组件间的状态共享。</p>
+<p><strong>使用全局变量</strong></p>
+<p>全局变量可以在应用的任何地方被访问和修改，因此可以用来在不同组件间共享状态。但是，这种方法容易导致状态难以追踪和维护，尤其是在大型应用中。</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// 在应用的入口文件中定义全局变量</span>
+<span class="hljs-variable language_">window</span>.<span class="hljs-property">appState</span> = {
+  <span class="hljs-attr">sharedValue</span>: <span class="hljs-string">&apos;initial value&apos;</span>,
+}
+
+<span class="hljs-comment">// 在组件A中读取全局变量</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">ComponentA</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> sharedValue = <span class="hljs-variable language_">window</span>.<span class="hljs-property">appState</span>.<span class="hljs-property">sharedValue</span>
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{sharedValue}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+}
+
+<span class="hljs-comment">// 在组件B中修改全局变量</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">ComponentB</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">handleClick</span> = (<span class="hljs-params"></span>) =&gt; {
+    <span class="hljs-variable language_">window</span>.<span class="hljs-property">appState</span>.<span class="hljs-property">sharedValue</span> = <span class="hljs-string">&apos;new value&apos;</span>
+  }
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{handleClick}</span>&gt;</span>Change Value<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+}
+</code></pre>
+<p><strong>使用内存变量</strong></p>
+<p>内存变量指的是在组件外部声明的变量，它们可以在组件间共享状态，但同样存在难以追踪和维护的问题。</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// 在组件外部声明内存变量</span>
+<span class="hljs-keyword">let</span> sharedValue = <span class="hljs-string">&apos;initial value&apos;</span>
+
+<span class="hljs-comment">// 在组件A中读取内存变量</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">ComponentA</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{sharedValue}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+}
+
+<span class="hljs-comment">// 在组件B中修改内存变量</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">ComponentB</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">handleClick</span> = (<span class="hljs-params"></span>) =&gt; {
+    sharedValue = <span class="hljs-string">&apos;new value&apos;</span>
+  }
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{handleClick}</span>&gt;</span>Change Value<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+}
+</code></pre>
+<p><strong>注意</strong></p>
+<p>尽管全局变量和内存变量在某些情况下可以用于组件通信，但它们并不推荐作为主要的通信方式。这是因为它们违反了 React 的单向数据流原则，并且可能导致状态难以追踪和维护。在大多数情况下，应该优先考虑使用 React 的 Context API、状态管理库（如 Redux）或者事件总线等更合适的方法来实现组件间的通信。</p>
+<h3 id="6使用事件冒泡">6.使用事件冒泡</h3>
+<p>在 React 中，可以使用合成事件系统来实现事件的冒泡，从而在不同层级的组件之间传递事件。</p>
+<p>示例如下：</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">Son</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>点击<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+}
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">Father</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">sayName</span> = (<span class="hljs-params">name</span>) =&gt; {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name)
+  }
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> sayName(&apos;Jack&apos;)}&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">Son</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Father</span>
+</code></pre>
+<h4 id="qs">Q&amp;S</h4>
+<p><strong>为什么 React 不推荐使用事件冒泡通信？</strong></p>
+<ul>
+<li>可读性和可维护性：
+使用事件冒泡进行组件通信可能会导致代码的可读性和可维护性降低。事件冒泡使得事件的监听和处理分散在不同的组件中，这使得追踪事件流和理解组件间的交互变得更加困难。</li>
+<li>命名空间污染：
+当多个组件或库都使用事件冒泡来进行通信时，可能会出现命名冲突。这是因为所有的事件监听器都是在同一个全局命名空间下注册的，这可能导致意外的行为或难以调试的错误。</li>
+<li>性能问题：
+大量使用事件冒泡可能会导致性能问题。每次事件冒泡都会导致事件监听器被调用，如果监听器数量很多或者处理逻辑复杂，可能会影响应用的响应速度。</li>
+<li>跨组件状态管理：
+事件冒泡通常用于跨组件的状态管理，但在 React 中，有更好的解决方案，如 Context API 和状态管理库（如 Redux）。这些工具提供了更加结构化和可预测的方式来管理和共享状态。</li>
+<li>React 的设计哲学：
+React 的设计哲学之一是单向数据流和组件状态的局部管理。这意味着每个组件应该尽可能独立，并且状态应该在组件内部或通过明确的 props 传递进行管理。使用事件冒泡违背了这一原则，因为它引入了一种隐式的、非局部的状态管理机制。
+测试难度：
+使用事件冒泡的代码通常更难以测试。因为事件监听器可能在应用的任何地方被触发，这增加了编写可靠测试用例的难度。</li>
+</ul>
+<h3 id="7使用-js-自定义事件">7.使用 JS 自定义事件</h3>
+<p>React 中也可以使用 JS 自定义事件实现通信，非必要不建议使用这种方式通信。</p>
+<h4 id="js-自定义事件描述">JS 自定义事件描述</h4>
+<p>在 JavaScript 中，自定义事件是一种允许你创建和触发自己的事件类型的机制。自定义事件可以用于组件之间的通信，或者在应用程序的不同部分之间传递信息。</p>
+<p>以下是一个创建自定义事件的示例：</p>
+<pre><code class="lang-js"><span class="hljs-comment">// 初始化数据</span>
+<span class="hljs-keyword">const</span> data = { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> }
+
+<span class="hljs-comment">// 创建自定义事件，用 detail 接收数据</span>
+<span class="hljs-keyword">const</span> event = <span class="hljs-keyword">new</span> <span class="hljs-title class_">CustomEvent</span>(<span class="hljs-string">&apos;eventName&apos;</span>, { <span class="hljs-attr">detail</span>: data })
+
+<span class="hljs-comment">// 监听自定义事件</span>
+<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&apos;eventName&apos;</span>, <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(e.<span class="hljs-property">detail</span>) <span class="hljs-comment">// { a: 1, b: 2 }</span>
+})
+
+<span class="hljs-comment">// 事件派发</span>
+<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">dispatchEvent</span>(event)
+</code></pre>
+<h4 id="js-自定义事件实现-react-组件通信">JS 自定义事件实现 React 组件通信</h4>
+<p>下面是使用 JS 自定义事件修改选中人员的示例，子组件中修改选中人员，父组件中监听人员改变事件，更新人员信息。</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { useEffect, useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+<span class="hljs-comment">// 定义子组件</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Son</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> options = [
+    { <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">19</span> },
+    { <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;Ailis&apos;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">18</span> },
+    { <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;Kevin&apos;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">16</span> },
+  ]
+
+  <span class="hljs-comment">// 用户操作修改人员，派发自定义事件，传递人员信息</span>
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">handleChange</span> = (<span class="hljs-params">e</span>) =&gt; {
+    <span class="hljs-keyword">const</span> item = options.<span class="hljs-title function_">find</span>(<span class="hljs-function">(<span class="hljs-params">i</span>) =&gt;</span> i.<span class="hljs-property">id</span> === +e.<span class="hljs-property">target</span>.<span class="hljs-property">value</span>)
+    <span class="hljs-keyword">const</span> event = <span class="hljs-keyword">new</span> <span class="hljs-title class_">CustomEvent</span>(<span class="hljs-string">&apos;customEvent&apos;</span>, { <span class="hljs-attr">detail</span>: item })
+    <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">dispatchEvent</span>(event)
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{handleChange}</span>&gt;</span>
+      {options.map((o) =&gt; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{o.id}</span>&gt;</span>
+          {o.name}（{o.age}）
+        <span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      ))}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span></span>
+  )
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Father</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> [user, setUser] = <span class="hljs-title function_">useState</span>({})
+
+  <span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-comment">// 监听自定义事件，获取变更后的人员信息</span>
+    <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&apos;customEvent&apos;</span>, listener)
+
+    <span class="hljs-keyword">return</span> <span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-comment">// 组件卸载时移除监听事件</span>
+      <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">removeEventListener</span>(<span class="hljs-string">&apos;customEvent&apos;</span>, listener)
+    }
+  }, [])
+
+  <span class="hljs-comment">// 事件处理函数</span>
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">listener</span> = (<span class="hljs-params">e</span>) =&gt; {
+    <span class="hljs-title function_">setUser</span>(e.<span class="hljs-property">detail</span>)
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>姓名：{user.name}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>年龄：{user.age}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Son</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Father</span>
+</code></pre>
+<p>React 组件通信在实际项目中如何应用？
+如何选择合适的 React 组件通信方式？
+React 组件通信的性能影响如何？</p>
+<h3 id="8使用观察者模式实现通信">8.使用观察者模式实现通信</h3>
+<p>观察者模式一般至少有一个可被观察的对象 Subject ，可以有多个观察者去观察这个对象。二者的关系是通过被观察者主动建立的，被观察者至少要有三个方法——添加观察者、移除观察者、通知观察者。
+当被观察者将某个观察者添加到自己的观察者列表后，观察者与被观察者的关联就建立起来了。此后只要被观察者在某种时机触发通知观察者方法时，观察者即可接收到来自被观察者的消息。</p>
+<p>使用观察者模式实现 React 组件通信的基本步骤：</p>
+<ol>
+<li><strong>创建被观察者对象</strong></li>
+<li><strong>创建被观察者对象</strong></li>
+<li><strong>被观察者对象触发通知观察者</strong></li>
+</ol>
+<p>以下是使用观察者模式实现组件通信的例子：</p>
+<pre><code class="lang-tsx"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">ChangeEventHandler</span>, useEffect, useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Subject</span>&lt;T = <span class="hljs-built_in">any</span>&gt; {
+  <span class="hljs-attr">observerList</span>: <span class="hljs-title class_">Observer</span>[]
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">observerList</span> = []
+  }
+
+  <span class="hljs-comment">/**
+   * 添加观察者
+   */</span>
+  <span class="hljs-title function_">addObserver</span>(<span class="hljs-params">observer: Observer</span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">observerList</span>.<span class="hljs-title function_">push</span>(observer)
+  }
+
+  <span class="hljs-comment">/**
+   * 移除观察者
+   */</span>
+  <span class="hljs-title function_">removeObserver</span>(<span class="hljs-params">observer: Observer</span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">observerList</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">observerList</span>.<span class="hljs-title function_">filter</span>(
+      <span class="hljs-function">(<span class="hljs-params">o</span>) =&gt;</span> o.<span class="hljs-property">name</span> !== observer.<span class="hljs-property">name</span>
+    )
+  }
+
+  <span class="hljs-comment">/**
+   * 主动通知观察者
+   */</span>
+  <span class="hljs-title function_">notifyObservers</span>(<span class="hljs-params">data: T</span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">observerList</span>.<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">o</span>) =&gt;</span> {
+      o.<span class="hljs-title function_">listen</span>(data)
+    })
+  }
+}
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Observer</span>&lt;T = <span class="hljs-built_in">any</span>&gt; {
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>
+  <span class="hljs-attr">callback</span>: <span class="hljs-function">(<span class="hljs-params">data: T</span>) =&gt;</span> <span class="hljs-built_in">void</span>
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">name: <span class="hljs-built_in">string</span>, callback: (data: T) =&gt; <span class="hljs-built_in">void</span>, subject: Subject</span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">callback</span> = callback
+
+    <span class="hljs-keyword">if</span> (subject) {
+      subject.<span class="hljs-title function_">addObserver</span>(<span class="hljs-variable language_">this</span>)
+    }
+  }
+
+  <span class="hljs-title function_">listen</span>(<span class="hljs-params">data: T</span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">callback</span>(data)
+  }
+}
+
+<span class="hljs-keyword">const</span> subject = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Subject</span>()
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Son</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> options = [
+    { <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">19</span> },
+    { <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;Ailis&apos;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">18</span> },
+    { <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;Kevin&apos;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">16</span> },
+  ]
+
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">handleChange</span>: <span class="hljs-title class_">ChangeEventHandler</span>&lt;<span class="hljs-title class_">HTMLSelectElement</span>&gt; = <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> item = options.<span class="hljs-title function_">find</span>(<span class="hljs-function">(<span class="hljs-params">i</span>) =&gt;</span> i.<span class="hljs-property">id</span> === +e.<span class="hljs-property">target</span>.<span class="hljs-property">value</span>)
+    subject.<span class="hljs-title function_">notifyObservers</span>(item)
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{handleChange}</span>&gt;</span>
+      {options.map((o) =&gt; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{o.id}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{o.id}</span>&gt;</span>
+          {o.name}（{o.age}）
+        <span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      ))}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span></span>
+  )
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Father</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> [user, setUser] = <span class="hljs-title function_">useState</span>({
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&apos;</span>,
+    <span class="hljs-attr">age</span>: <span class="hljs-literal">undefined</span>,
+  })
+
+  <span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-keyword">const</span> observer = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Observer</span>(
+      <span class="hljs-string">&apos;userObserver&apos;</span>,
+      <span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> <span class="hljs-title function_">setUser</span>(data),
+      subject
+    )
+
+    <span class="hljs-keyword">return</span> <span class="hljs-function">() =&gt;</span> {
+      subject.<span class="hljs-title function_">removeObserver</span>(observer)
+    }
+  }, [])
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>姓名：{user.name}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>年龄：{user.age}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Son</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Father</span>
+</code></pre>
+<h3 id="9使用发布订阅模式实现通信">9.使用发布订阅模式实现通信</h3>
+<p>观察者模式可以通过多种方式实现组件之间的通信。一种常见的方法是使用自定义事件系统，另一种方法是使用第三方库如 events 模块。</p>
+<p>JS 自定义事件实现 React 组件通信使用的也是发布订阅模式。</p>
+<p>使用发布订阅模式实现 React 组件通信的基本步骤：</p>
+<ol>
+<li><strong>创建事件发射器（Event Emitter）‌：</strong>
+你可以使用 Node.js 内置的 events 模块来创建一个事件发射器，或者使用其他类似功能的库。</li>
+<li><strong>在组件中订阅事件：</strong>
+在你的 React 组件中，你可以订阅感兴趣的事件，并提供一个回调函数来处理这些事件。</li>
+<li><strong>在组件中触发事件：</strong>
+在其他组件中，你可以触发事件，并将数据作为事件的负载传递。</li>
+</ol>
+<p>以下是使用事件触发器实现组件通信的例子：</p>
+<pre><code class="lang-tsx"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">ChangeEventHandler</span>, useCallback, useEffect, useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+<span class="hljs-keyword">type</span> <span class="hljs-title class_">CallbackFuction</span> = <span class="hljs-function">(<span class="hljs-params">data: <span class="hljs-built_in">any</span></span>) =&gt;</span> <span class="hljs-built_in">void</span>
+
+<span class="hljs-comment">/**
+ * 定义监听触发器
+ */</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">EventEmitter</span> {
+  <span class="hljs-attr">events</span>: { [<span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>]: <span class="hljs-title class_">CallbackFuction</span>[] }
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">events</span> = {}
+  }
+
+  <span class="hljs-comment">/**
+   * 订阅事件
+   * <span class="hljs-doctag">@param</span> <span class="hljs-variable">name</span>
+   * <span class="hljs-doctag">@param</span> <span class="hljs-variable">callback</span>
+   */</span>
+  <span class="hljs-title function_">subscribe</span>(<span class="hljs-params">name: <span class="hljs-built_in">string</span>, callback: CallbackFuction</span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">events</span>[name]
+      ? <span class="hljs-variable language_">this</span>.<span class="hljs-property">events</span>[name].<span class="hljs-title function_">push</span>(callback)
+      : (<span class="hljs-variable language_">this</span>.<span class="hljs-property">events</span>[name] = [callback])
+  }
+
+  <span class="hljs-comment">/**
+   * 取消订阅
+   * <span class="hljs-doctag">@param</span> <span class="hljs-variable">name</span>
+   * <span class="hljs-doctag">@param</span> <span class="hljs-variable">callback</span>
+   * <span class="hljs-doctag">@returns</span>
+   */</span>
+  <span class="hljs-title function_">unsubscribe</span>(<span class="hljs-params">name: <span class="hljs-built_in">string</span>, callback: CallbackFuction</span>) {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">events</span>[name]) <span class="hljs-keyword">return</span>
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">events</span>[name] = <span class="hljs-variable language_">this</span>.<span class="hljs-property">events</span>[name].<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">c</span>) =&gt;</span> c !== callback)
+  }
+
+  <span class="hljs-comment">/**
+   * 触发事件
+   * <span class="hljs-doctag">@param</span> <span class="hljs-variable">name</span>
+   * <span class="hljs-doctag">@param</span> <span class="hljs-variable">data</span>
+   * <span class="hljs-doctag">@returns</span>
+   */</span>
+  <span class="hljs-title function_">emit</span>(<span class="hljs-params">name: <span class="hljs-built_in">string</span>, data: <span class="hljs-built_in">any</span></span>) {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">events</span>[name]) <span class="hljs-keyword">return</span>
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">events</span>[name].<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">callback</span>) =&gt;</span> {
+      <span class="hljs-title function_">callback</span>(data)
+    })
+  }
+
+  <span class="hljs-comment">/**
+   * 清空事件
+   */</span>
+  <span class="hljs-title function_">cleanup</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">events</span> = {}
+  }
+}
+
+<span class="hljs-keyword">const</span> eventEmitter = <span class="hljs-keyword">new</span> <span class="hljs-title class_">EventEmitter</span>()
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Son</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> options = [
+    { <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">19</span> },
+    { <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;Ailis&apos;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">18</span> },
+    { <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;Kevin&apos;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">16</span> },
+  ]
+
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">handleChange</span>: <span class="hljs-title class_">ChangeEventHandler</span>&lt;<span class="hljs-title class_">HTMLSelectElement</span>&gt; = <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> item = options.<span class="hljs-title function_">find</span>(<span class="hljs-function">(<span class="hljs-params">i</span>) =&gt;</span> i.<span class="hljs-property">id</span> === +e.<span class="hljs-property">target</span>.<span class="hljs-property">value</span>)
+    eventEmitter.<span class="hljs-title function_">emit</span>(<span class="hljs-string">&apos;updateUser&apos;</span>, item)
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{handleChange}</span>&gt;</span>
+      {options.map((o) =&gt; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{o.id}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{o.id}</span>&gt;</span>
+          {o.name}（{o.age}）
+        <span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      ))}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span></span>
+  )
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Father</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> [user, setUser] = <span class="hljs-title function_">useState</span>({
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&apos;</span>,
+    <span class="hljs-attr">age</span>: <span class="hljs-literal">undefined</span>,
+  })
+
+  <span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> {
+    eventEmitter.<span class="hljs-title function_">subscribe</span>(<span class="hljs-string">&apos;updateUser&apos;</span>, handleUpdateUser)
+
+    <span class="hljs-keyword">return</span> <span class="hljs-function">() =&gt;</span> {
+      eventEmitter.<span class="hljs-title function_">unsubscribe</span>(<span class="hljs-string">&apos;updateUser&apos;</span>, handleUpdateUser)
+    }
+  }, [])
+
+  <span class="hljs-comment">/**
+   * 必须用 useCallback 包裹订阅事件
+   * 否则组件重新渲染时 handleUpdateUser 指向的事件不是同一个，取消订阅事件将失效
+   */</span>
+  <span class="hljs-keyword">const</span> handleUpdateUser = <span class="hljs-title function_">useCallback</span>(<span class="hljs-function">(<span class="hljs-params">data: <span class="hljs-built_in">any</span></span>) =&gt;</span> {
+    <span class="hljs-title function_">setUser</span>(data)
+  }, [])
+
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">handleCancel</span> = (<span class="hljs-params"></span>) =&gt; {
+    eventEmitter.<span class="hljs-title function_">unsubscribe</span>(<span class="hljs-string">&apos;updateUser&apos;</span>, handleUpdateUser)
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>姓名：{user.name}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>年龄：{user.age}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Son</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{handleCancel}</span>&gt;</span>取消订阅<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Father</span>
+</code></pre>
+<h2 id="在-react-中如何选择组件通信方式">在 React 中如何选择组件通信方式</h2>
+<p>在 React 中选择组件通信方式时，可以根据以下几个因素来决定：</p>
+<p><strong>1.组件的层级关系</strong></p>
+<ul>
+<li>父子组件通信: 通常使用 props 进行数据的向下传递。</li>
+<li>子父组件通信: 使用回调函数，子组件调用父组件传递下来的函数来传递数据。</li>
+<li>跨级组件通信: 可以使用 Context API 或者 Redux 等状态管理库。</li>
+<li>非嵌套组件通信: 可以使用 Context API、全局状态管理库或者消息订阅与发布机制。</li>
+</ul>
+<p><strong>2.数据流量</strong></p>
+<ul>
+<li>单向数据流: React 推崇单向数据流，即从父组件到子组件的数据传递，适合使用 props。</li>
+<li>双向数据绑定: 如果需要在子组件中修改父组件的状态，可以使用回调函数或者受控组件。</li>
+</ul>
+<p><strong>性能考虑</strong></p>
+<ul>
+<li>如果组件树很深，频繁地通过 props 传递数据可能会导致性能问题，这时可以考虑使用 Context API 或者 Redux。</li>
+<li>对于简单的状态共享，Context API 可能是更好的选择，因为它比引入 Redux 这样的外部库更加轻量。</li>
+</ul>
+<p><strong>项目复杂度</strong></p>
+<ul>
+<li>对于小型或中型项目，简单的 props 和回调函数可能就足够了。</li>
+<li>对于大型项目，可能需要引入 Redux 或 MobX 这样的状态管理库来更好地管理应用状态。</li>
+</ul>
+<p><strong>团队习惯和偏好</strong></p>
+<ul>
+<li>团队成员可能对某些通信方式更熟悉，选择大家都熟悉的通信方式可以提高开发效率。</li>
+</ul>
+<p><strong>可维护性和可扩展性</strong></p>
+<ul>
+<li>选择的通信方式应该使得代码易于理解和维护，同时在未来添加新功能时也能保持良好的扩展性。</li>
+</ul>
+<p><strong>尽可能使用 React 生态的通信方式</strong></p>
+<ul>
+<li>便于理解，提升可读性和可维护性</li>
+<li>使用其他方式，如全局变量 JS 自定义事件等，违背 React 设计哲学</li>
+<li>全局变量污染、会产生性能问题</li>
+<li>会使得代码程序难以测试</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../react_state/" class="navigation navigation-prev " aria-label="Previous page: React 状态管理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../react_hoc/" class="navigation navigation-next " aria-label="Next page: React 高阶组件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"React 组件通信","level":"1.3.4","depth":2,"next":{"title":"React 高阶组件","level":"1.3.5","depth":2,"path":"react/react_hoc/index.md","ref":"react/react_hoc/index.md","articles":[]},"previous":{"title":"React 状态管理","level":"1.3.3","depth":2,"path":"react/react_state/index.md","ref":"react/react_state/index.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/react_communication/index.md","mtime":"2024-06-24T06:38:41.812Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-06-27T03:02:11.703Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
