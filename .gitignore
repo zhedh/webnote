@@ -19,5 +19,6 @@ lerna-debug.log*
 *.sw?
 
 node_modules
-_book
+_book/
 test.js
+remark.md

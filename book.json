@@ -1,3 +1,5 @@
 {
-  "root": "./src"
+  "root": "./src",
+  "title": "WebNote",
+  "author": "zhedh"
 }
