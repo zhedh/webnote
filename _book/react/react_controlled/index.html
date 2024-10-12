@@ -242,9 +242,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../react_base.html">
+        <li class="chapter " data-level="1.4.1" data-path="../react_fiber/">
             
-                <a href="../react_base.html">
+                <a href="../react_fiber/">
             
                     
                     React Fiber 架构
@@ -255,12 +255,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../react_base.html">
+        <li class="chapter " data-level="1.4.2" data-path="../react_fiber_tree/">
             
-                <a href="../react_base.html">
+                <a href="../react_fiber_tree/">
             
                     
-                    React 双缓存机制
+                    React 双缓冲机制
             
                 </a>
             
@@ -330,6 +330,64 @@
                 <span>
             
                     
+                    Webpack
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../webpack/webpack_core/">
+            
+                <a href="../../webpack/webpack_core/">
+            
+                    
+                    Webpack 核心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../webpack/webpack_module/">
+            
+                <a href="../../webpack/webpack_module/">
+            
+                    
+                    Webpack 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../webpack/webpack_compile/">
+            
+                <a href="../../webpack/webpack_compile/">
+            
+                    
+                    Webpack 编译原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
                     微信小程序
             
                 </span>
@@ -339,7 +397,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" >
+        <li class="chapter " data-level="1.6.1" >
             
                 <span>
             
@@ -353,7 +411,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1.1" data-path="../../applet/chat/vga/">
+        <li class="chapter " data-level="1.6.1.1" data-path="../../applet/chat/vga/">
             
                 <a href="../../applet/chat/vga/">
             
@@ -507,9 +565,50 @@
 </ul>
 <p>受控组件在大多数情况下都是首选的表单处理方式，因为它们提供了更好的控制和可预测性。然而，在处理特别复杂的表单或者对性能有极高要求的情况下，可能需要考虑其他策略，比如使用非受控组件或者第三方表单库。</p>
 <h2 id="非受控组件">非受控组件</h2>
-<p>如何在实际开发中选择使用受控组件还是非受控组件？
-如何实现一个受控组件？
-如何实现一个非受控组件？</p>
+<p>在 React 中，非受控组件是指其值不受 React 控制的组件。与受控组件不同，非受控组件的值由 DOM 自身管理，而不是通过 React 的状态进行管理。这种类型的组件适用于那些不需要即时响应状态变化或者更倾向于使用传统 DOM 操作的场景。</p>
+<p>非受控组件示例：</p>
+<pre><code class="lang-tsx"><span class="hljs-keyword">import</span> { useRef, useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">UnControlled</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> ref = useRef&lt;<span class="hljs-title class_">HTMLInputElement</span>&gt;(<span class="hljs-literal">null</span>)
+  <span class="hljs-keyword">const</span> [name, setName] = <span class="hljs-title function_">useState</span>(<span class="hljs-string">&apos;&apos;</span>)
+
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">handleSubmit</span> = (<span class="hljs-params"></span>) =&gt; {
+    <span class="hljs-title function_">setName</span>(ref.<span class="hljs-property">current</span>?.<span class="hljs-property">value</span> || <span class="hljs-string">&apos;&apos;</span>)
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>您输入的名字是：{name}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">{ref}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{handleSubmit}</span>&gt;</span>提交<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">UnControlled</span>
+</code></pre>
+<h3 id="非受控组件的使用场景">非受控组件的使用场景</h3>
+<ul>
+<li><strong>简单的表单</strong>：对于一些简单的表单，你可能不需要 React 的状态管理功能，此时使用非受控组件可以减少代码的复杂性。</li>
+<li><strong>性能优化</strong>：在某些情况下，使用非受控组件可以避免不必要的渲染，从而提高应用的性能。</li>
+<li><strong>第三方库</strong>：当你需要与某些第三方库（如富文本编辑器）集成时，这些库可能有自己的方式来管理状态，这时使用非受控组件会更加方便。</li>
+</ul>
+<h3 id="优势">优势</h3>
+<ul>
+<li><strong>简单易用</strong>：非受控组件的代码通常比受控组件更简单，因为它们不需要在 React 的状态中维护表单值。</li>
+<li><strong>性能优化</strong>：在某些情况下，非受控组件可以避免不必要的渲染，因为它们的值不是由 React 的状态直接控制的。</li>
+<li><strong>与第三方库兼容</strong>：当需要与不支持 React 受控模式的第三方库（如某些富文本编辑器）集成时，非受控组件可能是更好的选择。</li>
+<li><strong>即时 DOM 访问</strong>：非受控组件可以直接访问 DOM 元素，这在需要即时访问 DOM 属性或方法时非常有用。</li>
+</ul>
+<h3 id="缺点">缺点</h3>
+<ul>
+<li><strong>状态不一致</strong>：非受控组件的值由 DOM 维护，不与 React 的状态同步，这可能导致状态不一致的问题。</li>
+<li><strong>难以追踪和调试</strong>：由于非受控组件的值不在 React 的状态中，因此在调试时可能难以追踪值的来源和变化。</li>
+<li><strong>缺乏控制</strong>：非受控组件不允许 React 在每次状态变化时执行验证或转换逻辑，这限制了开发者对表单输入的控制能力。</li>
+<li><strong>不利于单元测试</strong>：由于非受控组件的值不是由 React 的状态管理的，因此在对组件进行单元测试时可能更加困难。</li>
+<li><strong>安全风险</strong>：如果非受控组件用于敏感信息的输入，而没有适当的清理和验证，可能存在安全风险。</li>
+</ul>
 
                                 
                                 </section>
@@ -549,7 +648,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React 受控组件与非受控组件","level":"1.3.6","depth":2,"next":{"title":"React 进阶","level":"1.4","depth":1,"ref":"","articles":[{"title":"React Fiber 架构","level":"1.4.1","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React 双缓存机制","level":"1.4.2","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React Diff 算法","level":"1.4.3","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React 单向数据流","level":"1.4.4","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React 虚拟 DOM","level":"1.4.5","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React Hooks","level":"1.4.6","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]}]},"previous":{"title":"React 高阶组件","level":"1.3.5","depth":2,"path":"react/react_hoc/index.md","ref":"react/react_hoc/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zhedh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WebNote","gitbook":"*"},"file":{"path":"react/react_controlled/index.md","mtime":"2024-06-24T08:06:57.513Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-06-27T06:00:14.654Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React 受控组件与非受控组件","level":"1.3.6","depth":2,"next":{"title":"React 进阶","level":"1.4","depth":1,"ref":"","articles":[{"title":"React Fiber 架构","level":"1.4.1","depth":2,"path":"react/react_fiber/index.md","ref":"react/react_fiber/index.md","articles":[]},{"title":"React 双缓冲机制","level":"1.4.2","depth":2,"path":"react/react_fiber_tree/index.md","ref":"react/react_fiber_tree/index.md","articles":[]},{"title":"React Diff 算法","level":"1.4.3","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React 单向数据流","level":"1.4.4","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React 虚拟 DOM","level":"1.4.5","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]},{"title":"React Hooks","level":"1.4.6","depth":2,"path":"react/react_base.md","ref":"react/react_base.md","articles":[]}]},"previous":{"title":"React 高阶组件","level":"1.3.5","depth":2,"path":"react/react_hoc/index.md","ref":"react/react_hoc/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zhedh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WebNote","gitbook":"*"},"file":{"path":"react/react_controlled/index.md","mtime":"2024-06-27T07:19:37.873Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-10-12T05:44:55.739Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -601,6 +700,10 @@
     </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>

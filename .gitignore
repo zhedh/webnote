@@ -21,4 +21,5 @@ lerna-debug.log*
 node_modules
 _book/
 test.js
+test1.js
 remark.md
